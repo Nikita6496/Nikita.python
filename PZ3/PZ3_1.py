@@ -5,7 +5,7 @@ while type(a) != int: #Обработка исключений
     try:
         a = int(a)
     except ValueError:
-        print("Ошибка")
+        print("Ошибка!")
         а = input("Введите целое число:")
 
 print(100 <= a <= 999 and a % 2 != 0)
