@@ -25,8 +25,8 @@ if N > 0:
     while s <= N:
         h *= s
         g = (X ** s) / h
-        s += 1
         result += g
+        s += 1
 
     print(1 + result)
 else:
