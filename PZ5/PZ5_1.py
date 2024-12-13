@@ -5,7 +5,7 @@ def generate(a):
     a = random.randint(1000, 9999)
     return a
 b = (generate(num))
-print (f"Число:{b}")
+print (f"Число: {b}")
 
 def number_povtor(c):
     if 1000 <= b <= 9999:  # Проверка числа
