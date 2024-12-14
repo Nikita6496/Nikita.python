@@ -20,6 +20,3 @@ def number_povtor(c):
         return c
 p = (number_povtor(b))
 print (f"Число имеет одинаковые цифры? {p}")
-
-
-
