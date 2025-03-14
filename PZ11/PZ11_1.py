@@ -28,15 +28,43 @@ for i in range(len(k)):
     k[i] = int(k[i])
 f1.close()
 
+#f1 = open('nikita_1.txt')
+#max, t = 0,0
+#for i in range(len(k)):
+    #max = max if max > k[i] else k[i]
+    #if k[i] < 0:
+        #t += 1
+
+
+#f1 = open('nikita_1.txt')
+#ar, t = 0,0
+#for i in range(len(k)):
+#    ar = i
+#ari = ar / (len(k))
 
 f1 = open('nikita_1.txt')
-max, t = 0,0
+average = sum(k) / len(k)
+f1.close()
+
+#f1 = open('nikita_1.txt')
+#t = 0
+#new_s = []
+#for i in range(1, (len(k) -1)):
+#    new_e = (k[i - 1] + k[i + 1]) ** 2
+#    new_s.append(new_e)
+#f1.close()
+
+f1 = open('nikita_1.txt')
+t = 0
+new_s = []
 for i in range(len(k)):
-    max = max if max > k[i] else k[i]
-    if k[i] < 0:
-        t += 1
+    if i == k[0]:
+        new.e = (k[i + 1]) ** 2
+    new.e =
+    new_s.append(new_e)
+f1.close()
 
 f2 = open('nikita_2.txt', 'a')
 f2.write('\n')
-print("Количество элементов: ", len(k), "Максимальный элемент: ", max, "Количество отрицательных: ", t, file=f2)
+print("Количество элементов: ", len(k), "Среднее арифметическое: ", average, "Последовательность, в которой каждый последующий элемент равен квадрату суммы двух соседних элементов: ", new_s, file=f2)
 f2.close()
