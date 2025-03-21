@@ -4,7 +4,6 @@
 
 t = 0
 d = 0
-m = 0
 for i in open('text18-18.txt', encoding='UTF-16'):
  print(i, end='')
  t += 1
