@@ -21,6 +21,8 @@ with sq.connect("company_strah.db") as con:
         ("10.10.2020 10:10:19", 100000, "Страхование жизни", 30, "Первый филиал")
     ]
     cur.executemany("INSERT INTO services VALUES (?, ?, ?, ?, ?)", information)
+    cur.execute("SELECT * FROM services ")
+    print(cur.fetchall())
 
     #cur.execute("SELECT * FROM services WHERE surname_klient = ?", ("Морозова",))
     #print(cur.fetchall())
