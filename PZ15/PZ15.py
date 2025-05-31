@@ -10,31 +10,31 @@ with sq.connect("company_strah.db") as con:
 
     information = [
         ("10.10.2020 10:10:10", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:11", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:12", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:13", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:14", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:15", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:16", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:17", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:18", 100000, "Страхование жизни", 30, "Первый филиал"),
-        ("10.10.2020 10:10:19", 100000, "Страхование жизни", 30, "Первый филиал")
+        ("10.10.2020 10:10:11", 100000, "Страхование жизни", 40, "Первый филиал"),
+        ("10.10.2020 10:10:12", 100000, "Страхование жизни", 50, "Первый филиал"),
+        ("10.10.2020 10:10:13", 100000, "Страхование жизни", 60, "Первый филиал"),
+        ("10.10.2020 10:10:14", 100000, "Страхование жизни", 70, "Первый филиал"),
+        ("10.10.2020 10:10:15", 100000, "Страхование жизни", 80, "Первый филиал"),
+        ("10.10.2020 10:10:16", 100000, "Страхование жизни", 90, "Первый филиал"),
+        ("10.10.2020 10:10:17", 100000, "Страхование жизни", 100, "Первый филиал"),
+        ("10.10.2020 10:10:18", 100000, "Страхование жизни", 110, "Первый филиал"),
+        ("10.10.2020 10:10:19", 100000, "Страхование жизни", 120, "Первый филиал")
     ]
     cur.executemany("INSERT INTO services VALUES (?, ?, ?, ?, ?)", information)
-    cur.execute("SELECT * FROM services ")
-    print(cur.fetchall())
-
-    #cur.execute("SELECT * FROM services WHERE surname_klient = ?", ("Морозова",))
-    #print(cur.fetchall())
-    #cur.execute("SELECT * FROM services WHERE notary_type = ?", ("Договор купли-продажи квартиры",))
-    #print(cur.fetchall())
-    #cur.execute("SELECT surname_klient,notary_type,sum_of_transaction,dohod FROM services WHERE dohod > ?",(1000,))
+    #cur.execute("SELECT * FROM services ")
     #print(cur.fetchall())
 
-    #cur.execute("DELETE FROM services WHERE surname_klient = ?", ("Петрова",))
-    #cur.execute("DELETE FROM services WHERE sum_of_transaction < ?", (2600,))
-    #cur.execute("DELETE FROM services WHERE dohod > ?", (1000,))
+    #cur.execute("SELECT * FROM services WHERE stavka = ?", (30,))
+    #print(cur.fetchall())
+    #cur.execute("SELECT * FROM services WHERE filial = ?", ("Первый филиал",))
+    #print(cur.fetchall())
+    #cur.execute("SELECT data_zak,strah_type,stavka,filial FROM services WHERE strah_sum < ?",(1000,))
+    #print(cur.fetchall())
 
-    #cur.execute("UPDATE services SET notary_type = ? WHERE surname_klient = ? AND name_klient = ? AND lastname_klient = ?",("Продажа дачного участка", "Федорова", "Мария", "Олеговна"))
-    #cur.execute("UPDATE services SET sum_of_transaction = ? WHERE surname_klient = ? AND name_klient = ? AND lastname_klient = ?",(3500, "Смирнова", "Анна", "Владимировна"))
+    #cur.execute("DELETE FROM services WHERE data_zak = ?", ("10.10.2020 10:10:10"))
+    #cur.execute("DELETE FROM services WHERE stavka < ?", (40,))
+    #cur.execute("DELETE FROM services WHERE strah_sum > ?", (1000000,))
+
+    #cur.execute("UPDATE services SET filial = ? WHERE data_zak = ? AND strah_sum = ? AND strah_type = ?",("Второй филилал", "10.10.2020 10:10:10", "100000", "Страхование жизни"))
+    #cur.execute("UPDATE services SET strah_sum = ? WHERE data_zak = ? AND strah_type = ? AND stavka = ?",(200000, "10.10.2020 10:10:11", "Анна", "Владимировна"))
     #cur.execute("UPDATE services SET dohod = ? + 500 WHERE notary_type = ?",(1300, "Продажа коммерческой недвижимости"))

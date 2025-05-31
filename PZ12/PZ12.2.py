@@ -1,7 +1,7 @@
 # Составить генератор (yield), который преобразует все буквенные символы в
 # строчные.
 
-text = 'NIKITA'
+text = 'NIKITA 344552 dfghjk'
 def zadanie(a):
     b = a.split()
     yield from [i.lower() for i in b]
